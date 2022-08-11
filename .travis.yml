@@ -6,7 +6,7 @@ before_install:
   - docker build -t smhzaihr/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docke rrun smhzaihr/react-test npm test -- --coverage
+  - docke run smhzaihr/react-test npm test -- --coverage
 
 after_sucess:
   - docker build -t smhzaihr/multi-client ./client
